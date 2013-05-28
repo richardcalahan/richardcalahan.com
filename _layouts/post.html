@@ -3,11 +3,7 @@ layout: default
 ---
 
 <section id="post">
-  <article class="post">
-    <div class="date">{{page.date | date: "%m.%d.%Y"}}</div>
-    <h2>{{page.title}}</h2>
-    {{ content }}
-  </article>
+  {% assign post = page %}
+  {% include post.html %}
 </section>
-
 

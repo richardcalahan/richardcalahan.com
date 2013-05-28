@@ -68,6 +68,7 @@ footer .copyleft {
 section#home .more {
   font-size: .8em;
   color: #bca474;
+  display: block;
 }
 
 /*****************************************************************************/
