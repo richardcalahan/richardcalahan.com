@@ -1,0 +1,19 @@
+---
+layout: default
+title: blog.richardcalahan.com
+---
+
+<section id="home">
+  {% for post in site.posts %}
+  <article class="post">
+    <div class="date">{{post.date | date: "%m.%d.%Y"}}</div>
+    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+    {% if post.content.size > post.excerpt.size %}
+    {{ post.excerpt }}
+    <a class="more" href="{{post.url}}">[...]</a>
+    {% else %}
+    {{ post.content }}
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>

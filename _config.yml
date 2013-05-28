@@ -1,0 +1,3 @@
+name: blog.richardcalahan.com
+pygments: true
+permalink: /:title

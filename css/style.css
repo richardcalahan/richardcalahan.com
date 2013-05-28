@@ -1,0 +1,119 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF;
+  font-size: .95em;
+  font-family: 'Georgia', serif;
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; 
+  font-weight: normal;
+  margin: 0;
+}
+
+p { margin-bottom: 1em }
+
+a { 
+  color: #444;
+  text-decoration: none;
+}
+a:hover { 
+  color: #444;
+  text-decoration: underline;
+}
+
+a:visited { color: #444 }
+
+header, footer, article.post {
+  width: 85%;
+  margin: 0 auto;
+}
+
+header, footer {
+  padding: 1.5em 0;
+}
+
+header a.logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+}
+
+header a.logo img {
+  max-width: 100%;
+  display: block;
+}
+
+footer .copyleft {
+  font-size: .7em;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+section#home .more {
+  font-size: .8em;
+  color: #bca474;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+article.post {
+  border-top: solid 3px #bca474;
+  width: 85%;
+  line-height: 1.7;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+article.post .date {
+  color: #bca474;
+  margin-bottom: .5em;
+  font-size: .9em;
+}
+
+article.post h2 {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: .5em;
+}
+
+article.post img {
+  max-width: 100%;
+}
+
+article.post blockquote {
+  padding-left: 1em;
+  border-left: solid 1px #bca474;
+  color: #333;
+}
+
+/*****************************************************************************/
+/*
+/* Media Queries
+/*
+/*****************************************************************************/
+
+@media screen and (min-width: 600px) {
+  header, footer, article.post {
+    width: 500px;
+  }
+}
