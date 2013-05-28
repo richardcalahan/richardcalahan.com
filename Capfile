@@ -18,3 +18,5 @@ namespace :jekyll do
     run "cd #{deploy_to}/current && jekyll build"
   end
 end
+
+after 'deploy:create_symlink', 'jekyll:build'
