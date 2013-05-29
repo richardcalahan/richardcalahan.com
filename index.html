@@ -1,16 +1,4 @@
----
-layout: default
-title: blog.richardcalahan.com
----
+<script type="text/javascript">
+  window.location = window.location.href + 'info';
+</script>
 
-<section id="home">
-  {% for post in site.posts %}
-    {% if post.content.size > post.excerpt.size %}
-    {% assign content = post.excerpt %}
-    {% assign excerpt = true %}
-    {% else %}
-    {% assign content = post.content %}
-    {% endif %}
-    {% include post.html %}
-  {% endfor %}
-</section>

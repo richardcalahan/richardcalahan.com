@@ -13,6 +13,13 @@ set :rvm_path,    '/usr/local/rvm'
 
 server 'harrison.richardcalahan.com', :app, :web, :db, :primary => true
 
+namespace :deploy do 
+  [:start, :stop, :restart, :finalize_update].each do |t|
+    desc "#{t} task is a no-op with jekyll"
+    task t, :roles => :app do; end
+  end
+end
+
 namespace :jekyll do
   task :build do 
     run "cd #{deploy_to}/current && jekyll build"
