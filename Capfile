@@ -1,8 +1,8 @@
 require 'rvm/capistrano'
 load 'deploy'
 
-set :application, 'blog.richardcalahan.com'
-set :repository,  'https://richardcalahan:willywonka1@github.com/richardcalahan/blog.richardcalahan.com.git'
+set :application, 'richardcalahan.com'
+set :repository,  'https://richardcalahan:willywonka1@github.com/richardcalahan/richardcalahan.com.git'
 set :scm,         :git
 set :deploy_to,   "/var/www/#{application}"
 
