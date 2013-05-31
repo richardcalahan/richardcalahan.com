@@ -1,4 +1,4 @@
 name: Richard Calahan
 pygments: true
-permalink: /blog/:title
+permalink: pretty
 exclude: ['Capfile', 'REVISION']

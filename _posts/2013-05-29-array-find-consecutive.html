@@ -1,0 +1,65 @@
+---
+layout: post
+title: Array#find_consecutive
+categories: ['blog']
+date: 2013-05-30 10:44 PDT
+---
+
+<p>Ruby is a fantastically designed scripting language. There's a method for virtually every task you can think of- yet it doesn't feel bloated like PHP.</p>
+<p>Ruby is particularly powerfull when it comes to collections. Interating, sorting and searching algorithms are all beautifully distilled into the Enumerable mixin and included in all collection classes.</p>
+<p>I never thought there would be a case where Ruby <i>didn't</i> have a quick solution for me, but it fell short in a recent case for a client.</p>
+
+<p>I needed to determine if an array of integers contained a non-overlapping consecutive series of <i>n</i> length. So, let's say I had an array of integers:</p>
+
+{% highlight ruby %}
+[1, 2, 3, 4, 5, 7, 8, 10]
+{% endhighlight %} 
+
+<p>And I want to determine if it has a consecutive series of 5 elements. It would be great if I could call something like "find_consecutive" on the array, and have it return each non-overlapping series. No such method exists.</p> 
+
+<p>My initial solution was to open up the Array class and add my own implementation:</p>
+
+{% highlight ruby %}
+class Array
+  def find_consecutive step=1
+    r_ary, c_ary = [[], []]
+    self.each_with_index do |v, i|
+      n = self[i+1]
+      c_ary << v if c_ary.length == 0
+      if v + step == n
+        c_ary << n
+      else
+        r_ary << c_ary if c_ary.length > 1
+        c_ary = []
+      end
+    end    
+    return r_ary
+  end
+end
+{% endhighlight %} 
+
+<p>This worked great. It returns an array of arrays. Each array representing a consecutive series. Called on the array above, it yields:</p>
+
+{% highlight ruby %}
+[1, 2, 3, 4, 5, 7, 8, 10].find_consecutive
+# => [[1, 2, 3, 4, 5], [7, 8]]
+{% endhighlight %}
+
+<p>Perfect! Now i can iterate over the return value and find out if any of the arrays are 5 elements long. </p>
+
+<p>Though, it really annoyed me that I had to munge the array class like that. Why not build this right into Ruby at the C level? Thankfully, Ruby's C level API is very well structured and a breeze to plug into. </p>
+
+<p>I've replicated the Ruby implementation above in pure C, and <a href="https://github.com/richardcalahan/ruby_array_find_consecutive" target="_blank">packaged it in a gem.</a></p>
+
+<p>I knew there would be some performace improvement, but had no idea it would be this significant. When tested on an array of over 2 million elements the execution time more than halves!</p>
+
+{% highlight bash %}
+method                  seconds
+-----------------------------------                        
+find consecutive (Ruby) 1.155206
+find consecutive (C)    0.507013
+{% endhighlight %}
+
+<p>Tell your friends!</p>
+
+<p><a href="https://github.com/richardcalahan/ruby_array_find_consecutive" target="_blank">[code]</a></p>

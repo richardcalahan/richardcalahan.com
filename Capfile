@@ -1,4 +1,5 @@
 require 'rvm/capistrano'
+
 load 'deploy'
 
 set :application, 'richardcalahan.com'
