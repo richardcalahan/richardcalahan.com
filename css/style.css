@@ -150,6 +150,11 @@ article.post blockquote {
   color: #333;
 }
 
+article.post .quote {
+  font-size: 2em;
+  font-style: italic;
+}
+
 /*****************************************************************************/
 /*
 /* Info
