@@ -253,12 +253,18 @@ a.site {
   text-decoration: none;
   display: block;
   text-align: center;
+  font-family: Helvetica Neue, sans serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .95em;
 }
 
 a.site span {
   -webkit-transition: opacity .3s;
   opacity: 0;
   color: #aaa;
+  font-family: Georgia, serif;
+  text-transform: lowercase;
 }
 
 a.site:hover span {
