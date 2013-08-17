@@ -230,6 +230,21 @@ article.employer .meta .date {
   color: #bbb;
 }
 
+#resume {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: .8em;
+  top: -10px;
+  position: relative;
+}
+
+#resume a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
 /*****************************************************************************/
 /*
 /* Media Queries
