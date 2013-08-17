@@ -113,7 +113,7 @@ footer .copyleft {
 }
 
 a, img {
-    border:none;
+  border:none;
 }
 
 /*****************************************************************************/
@@ -165,7 +165,7 @@ article.post blockquote {
 }
 
 article.post .quote {
-  font-size: 2em;
+  font-size: 1.5em;
   font-style: italic;
 }
 
@@ -178,7 +178,7 @@ article.post .quote {
 section#info h1 {
   line-height: 1.2;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -209,8 +209,8 @@ nav#social a:hover img {
 }
 
 img#self_portrait {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   display: block;
 }
@@ -252,7 +252,32 @@ article.employer .meta .date {
 /*****************************************************************************/
 
 @media screen and (min-width: 600px) {
+  header {
+    position: fixed;
+    width: inherit;
+    background-color: white;
+    z-index: 100;
+  }
+
   .container {
     width: 500px;
   }
+
+  section.container {
+    padding-top: 110px;
+  }
+
+  article.post .quote {
+    font-size: 2em;
+  }
+
+  img#self_portrait {
+    width: 250px;
+    height: 250px;
+  }
+
+  section#info h1 {
+    font-size: 2em;
+  }
+
 }
