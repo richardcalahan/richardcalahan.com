@@ -116,6 +116,10 @@ a, img {
   border:none;
 }
 
+.hide {
+  opacity: 0 !important;
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -245,6 +249,22 @@ article.employer .meta .date {
   color: #aaa;
 }
 
+a.site {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+a.site span {
+  -webkit-transition: opacity .3s;
+  opacity: 0;
+  color: #aaa;
+}
+
+a.site:hover span {
+  opacity: 1;
+}
+
 /*****************************************************************************/
 /*
 /* Media Queries
@@ -252,6 +272,7 @@ article.employer .meta .date {
 /*****************************************************************************/
 
 @media screen and (min-width: 600px) {
+
   header {
     position: fixed;
     width: inherit;
