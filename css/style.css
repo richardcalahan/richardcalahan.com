@@ -18,11 +18,11 @@ body {
 }
 
 #site_wrapper {
-    background-color: #ffffff;
-    width: 90%;
-    margin: 0 auto;
-    border-left: solid 1px #ddd;
-    border-right: solid 1px #ddd;
+  background-color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,6 +96,7 @@ header nav a.current {
 footer {
   padding: 1.5em 0;
   border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
 }
 
 footer .copyleft {
@@ -142,6 +143,11 @@ article.post {
 article.post .date {
   color: #bbb;
   font-size: .9em;
+}
+
+article.post .date a {
+  text-decoration: none;
+  color: #bbb;
 }
 
 article.post h3 a {
