@@ -254,7 +254,6 @@ a.site {
   display: block;
   text-align: center;
   font-family: Helvetica Neue, sans serif;
-  text-transform: uppercase;
   font-weight: bold;
   font-size: .95em;
 }
@@ -309,3 +308,10 @@ a.site:hover span {
   }
 
 }
+
+@media screen and (min-width: 900px) {
+  #site_wrapper {
+    width: 800px;
+  }
+}
+
