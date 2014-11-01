@@ -18,14 +18,14 @@ p {
 
 
 #about {
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.5;
   padding: 10%;
 }
 
 @media (min-width: 768px) {
   #about {
-    width: 500px;
+    width: 450px;
     top: 10%;
     left: 10%;
     padding: 0px;
